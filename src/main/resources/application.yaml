@@ -1,0 +1,8 @@
+ktor:
+  deployment:
+    port: 8080
+  application:
+    modules:
+      - dev.pupwired.SerializationKt.configureSerialization
+      - dev.pupwired.StatusPagesKt.configureStatusPages
+      - dev.pupwired.RoutingKt.configureRouting
