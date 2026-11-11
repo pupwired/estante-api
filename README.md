@@ -1,33 +1,16 @@
 # estante-api
 
-This project was created using the [Ktor Project Generator](https://start.ktor.io).
-
-Here are some useful links to get you started:
- * [Ktor Documentation](https://ktor.io/docs/home.html)
- * [Ktor GitHub page](https://github.com/ktorio/ktor)
- * [Ktor Slack chat](https://app.slack.com/client/T09229ZC6/C0A974TJ9). [Request an invite](https://surveys.jetbrains.com/s3/kotlin-slack-sign-up).
-
-
-## Features
-Here's a list of features included in this project:
-
-| Name | Description |
-|------|-------------|
-| [Call Logging](https://start.ktor.io/p/io.ktor/server-call-logging) | Logs client requests |
-| [Status Pages](https://start.ktor.io/p/io.ktor/server-status-pages) | Provides exception handling for routes |
-| [Content Negotiation](https://start.ktor.io/p/io.ktor/server-content-negotiation) | Provides automatic content conversion according to Content-Type and Accept headers |
-| [kotlinx.serialization](https://start.ktor.io/p/io.ktor/server-kotlinx-serialization) | Handles JSON serialization using kotlinx.serialization library |
-
+Ktor API for the Estante e-book reader and library app.
 
 ## Building & Running
-To build or run the project, use one of the following tasks:
+To build or run the project locally:
 
 
-| Task | Description |
-|------|-------------|
-| `./gradlew test`    | Run the tests     |
-| `./gradlew build`   | Build the project |
-| `./gradlew run`     | Run the server    |
+| Command                             | Description                              |
+|-------------------------------------|------------------------------------------|
+| `docker compose up -d`              | Compose and run the PostgreSQL container |
+| `./gradlew run`                     | Run the server                           |
+| `curl http://localhost:8080/health` | Tests the server health                  |
 
 If the server starts successfully, you'll see the following output:
 ```

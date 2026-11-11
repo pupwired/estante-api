@@ -1,8 +1,11 @@
 ktor:
   deployment:
-    port: 8080
+    port: 8080 #"$PORT:8080"
   application:
     modules:
-      - dev.pupwired.SerializationKt.configureSerialization
-      - dev.pupwired.StatusPagesKt.configureStatusPages
-      - dev.pupwired.RoutingKt.configureRouting
+      - dev.pupwired.ApplicationKt.module
+
+db:
+  url: jdbc:postgresql://localhost:5432/estante #"$DB_URL:jdbc:postgresql://localhost:5432/estante"
+  user: estante #"$DB_USER:estante"
+  password: estante #"$DB_PASSWORD:estante"
