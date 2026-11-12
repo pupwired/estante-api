@@ -11,6 +11,7 @@ To build or run the project locally:
 | `docker compose up -d`              | Compose and run the PostgreSQL container |
 | `./gradlew run`                     | Run the server                           |
 | `curl http://localhost:8080/health` | Tests the server health                  |
+| `./scripts/smoke-test.sh`           | Runs smoke tests                         |
 
 If the server starts successfully, you'll see the following output:
 ```
