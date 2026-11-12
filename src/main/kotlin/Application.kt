@@ -46,6 +46,7 @@ fun Application.module() {
         route("/v1") {
             userRoutes(ds)
             ratingRoutes(ds)
+            rankingRoutes(ds)
         }
     }
 }
