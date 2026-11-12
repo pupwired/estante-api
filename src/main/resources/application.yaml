@@ -1,11 +1,11 @@
 ktor:
-  deployment:
-    port: 8080 #"$PORT:8080"
   application:
     modules:
       - dev.pupwired.ApplicationKt.module
+  deployment:
+    port: "$PORT:8080"   # Cloud Run injects PORT
 
 db:
-  url: jdbc:postgresql://localhost:5432/estante #"$DB_URL:jdbc:postgresql://localhost:5432/estante"
-  user: estante #"$DB_USER:estante"
-  password: estante #"$DB_PASSWORD:estante"
+  url: "$DB_URL:jdbc:postgresql://localhost:5432/estante"
+  user: "$DB_USER:estante"
+  password: "$DB_PASSWORD:estante"
