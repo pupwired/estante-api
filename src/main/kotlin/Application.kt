@@ -43,6 +43,9 @@ fun Application.module() {
             }.isSuccess
             call.respond(Health("ok", dbOk))
         }
+        route("/v1") {
+            userRoutes(ds)
+        }
     }
 }
 
